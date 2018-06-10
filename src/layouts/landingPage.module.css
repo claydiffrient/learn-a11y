@@ -1,0 +1,6 @@
+@import "../utils/variables.css";
+
+.root {
+  background-color: var(--main-blue-color);
+  color: var(--main-white-color);
+}
