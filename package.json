@@ -1,8 +1,12 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "learn-a11y",
+  "description": "Site for learning how to make things accessible",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Clay Diffrient <clay.diffrient@gmail.com>",
+  "engines": {
+    "node": ">=10",
+    "npm": ">=6.1"
+  },
   "dependencies": {
     "@instructure/ui-buttons": "^5.11.0",
     "@instructure/ui-elements": "^5.11.0",
@@ -16,9 +20,7 @@
     "react-helmet": "^5.2.0",
     "typography-theme-de-young": "^0.16.9"
   },
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": ["a11y", "accessibility", "learning"],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
