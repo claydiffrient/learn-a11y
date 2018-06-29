@@ -3,6 +3,7 @@ module.exports = {
     title: "Learn a11y"
   },
   plugins: [
+    "gatsby-plugin-glamor",
     "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-plugin-typography",

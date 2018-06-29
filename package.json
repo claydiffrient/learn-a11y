@@ -13,14 +13,22 @@
     "@instructure/ui-icons": "^5.11.0",
     "@instructure/ui-layout": "^5.11.0",
     "@instructure/ui-themes": "^5.11.0",
-    "gatsby": "^1.9.270",
-    "gatsby-link": "^1.6.40",
-    "gatsby-plugin-react-helmet": "^2.0.10",
-    "gatsby-plugin-typography": "^1.7.18",
+    "gatsby": "next",
+    "gatsby-plugin-glamor": "next",
+    "gatsby-plugin-react-helmet": "next",
+    "gatsby-plugin-typography": "next",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
+    "react-typography": "^0.16.13",
+    "typography": "^0.16.17",
     "typography-theme-de-young": "^0.16.9"
   },
-  "keywords": ["a11y", "accessibility", "learning"],
+  "keywords": [
+    "a11y",
+    "accessibility",
+    "learning"
+  ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
