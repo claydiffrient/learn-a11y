@@ -7,7 +7,7 @@ import Button from "@instructure/ui-buttons/lib/components/Button";
 import { push } from "gatsby";
 
 import theme from "@instructure/ui-themes/lib/canvas";
-import styles from "./landingPage.module.css";
+import variables from "../utils/variables";
 import { StaticQuery, graphql } from "gatsby";
 
 theme.use();
@@ -17,7 +17,12 @@ const ctaButtonProps = {
 };
 
 const Header = () => (
-  <div className={styles.root}>
+  <div
+    css={{
+      "background-color": variables.mainBlueColor,
+      color: variables.mainWhiteColor
+    }}
+  >
     <Flex height="100vh" justifyItems="center" padding="large">
       <FlexItem shrink grow textAlign="center">
         <Heading
