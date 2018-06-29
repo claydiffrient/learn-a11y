@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./header.module.css";
 import Flex, { FlexItem } from "@instructure/ui-layout/lib/components/Flex";
 import Heading from "@instructure/ui-elements/lib/components/Heading";
-import Link from "gatsby-link";
+import { Link } from "gatsby";
 
 const navProps = {
   padding: "small"

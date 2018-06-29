@@ -1,17 +1,16 @@
 import React from "react";
-import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import Flex, { FlexItem } from "@instructure/ui-layout/lib/components/Flex";
 import Heading from "@instructure/ui-elements/lib/components/Heading";
 import Text from "@instructure/ui-elements/lib/components/Text";
 import Button from "@instructure/ui-buttons/lib/components/Button";
-import { navigateTo } from "gatsby-link";
+import { push } from "gatsby";
 
 import theme from "@instructure/ui-themes/lib/canvas";
+import styles from "./landingPage.module.css";
+import { StaticQuery, graphql } from "gatsby";
 
 theme.use();
-
-import styles from "./landingPage.module.css";
 
 const ctaButtonProps = {
   size: "small"
@@ -47,7 +46,7 @@ const Header = () => (
             </Text>
             <Button
               onClick={() => {
-                navigateTo("/learning/content");
+                push("/learning/content");
               }}
               {...ctaButtonProps}
             >
@@ -70,39 +69,32 @@ const Header = () => (
   </div>
 );
 
-const Layout = ({ data, children }) => (
-  <div>
-    <Helmet
-      title={data.site.siteMetadata.title}
-      meta={[
-        {
-          name: "description",
-          content: "A site to help people learn accessibility"
-        },
-        { name: "keywords", content: "a11y, web, development" }
-      ]}
-    />
-    <Header siteTitle={data.site.siteMetadata.title} />
-    {children()}
-  </div>
-);
-
-Layout.propTypes = {
-  children: PropTypes.func
-};
-
-Layout.defaultProps = {
-  children() {}
-};
-
-export default Layout;
-
-export const query = graphql`
-  query LandingPageSiteTitleQuery {
-    site {
-      siteMetadata {
-        title
+export default ({ children }) => (
+  <StaticQuery
+    query={graphql`
+      query LandingPageSiteTitleQuery {
+        site {
+          siteMetadata {
+            title
+          }
+        }
       }
-    }
-  }
-`;
+    `}
+    render={data => (
+      <>
+        <Helmet
+          title={data.site.siteMetadata.title}
+          meta={[
+            {
+              name: "description",
+              content: "A site to help people learn accessibility"
+            },
+            { name: "keywords", content: "a11y, web, development" }
+          ]}
+        />
+        <Header siteTitle={data.site.siteMetadata.title} />
+        <div>{children}</div>
+      </>
+    )}
+  />
+);
