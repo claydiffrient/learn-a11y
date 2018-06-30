@@ -1,6 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
-import Header from "../components/header";
+import Header from "../header";
 import { StaticQuery, graphql } from "gatsby";
 
 import theme from "@instructure/ui-themes/lib/canvas";

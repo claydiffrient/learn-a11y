@@ -4,7 +4,7 @@ import Heading from "@instructure/ui-elements/lib/components/Heading";
 import Text from "@instructure/ui-elements/lib/components/Text";
 import Button from "@instructure/ui-buttons/lib/components/Button";
 import { push } from "gatsby";
-import Layout from "../../../components/layout";
+import Layout from "../../../components/layouts/layout";
 
 const IndexPage = () => (
   <Layout>
