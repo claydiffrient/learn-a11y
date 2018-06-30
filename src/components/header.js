@@ -23,25 +23,52 @@ const Header = ({ siteTitle }) => (
       color: variables.mainWhiteColor
     }}
   >
-    <Flex>
-      <FlexItem shrink>
-        <Link css={linkCss} to="/">
-          <Heading level="h1" margin="small">
-            learn a11y
-          </Heading>
-        </Link>
-      </FlexItem>
-      <FlexItem {...navProps}>
-        <Link css={linkCss} to="/learning/content">
-          Content Creators
-        </Link>
-      </FlexItem>
-      <FlexItem {...navProps}>
-        <Link css={linkCss} to="/learning/applications">
-          Web Developers
-        </Link>
-      </FlexItem>
-    </Flex>
+    <div
+      css={{
+        display: "grid",
+        "grid-template-columns": "1fr 3fr",
+        "grid-auto-columns": "auto",
+        "grid-template-areas": `
+        'logo navitems'
+      `
+      }}
+    >
+      <Link
+        css={{
+          "grid-area": "logo",
+          ...linkCss
+        }}
+        to="/"
+      >
+        <h1
+          css={{
+            color: variables.mainWhiteColor,
+            margin: "0.75rem",
+            "font-size": "2.5rem"
+          }}
+        >
+          learn a11y
+        </h1>
+      </Link>
+      <nav
+        css={{
+          "grid-area": "navitems",
+          display: "flex",
+          "justify-content": "flex-start"
+        }}
+      >
+        <div css={{ margin: "1rem", "line-height": "2em" }}>
+          <Link css={linkCss} to="/learning/content">
+            Content Creators
+          </Link>
+        </div>
+        <div css={{ margin: "1rem", "line-height": "2em" }}>
+          <Link css={linkCss} to="/learning/applications">
+            Web Developers
+          </Link>
+        </div>
+      </nav>
+    </div>
   </div>
 );
 

@@ -139,7 +139,9 @@ export default ({ children }) => (
             },
             { name: "keywords", content: "a11y, web, development" }
           ]}
-        />
+        >
+          <html lang="en" dir="ltr" />
+        </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div>{children}</div>
       </>
