@@ -16,7 +16,7 @@ const ctaButtonProps = {
 const Header = () => (
   <div
     css={{
-      "background-color": variables.mainBlueColor,
+      backgroundColor: variables.mainBlueColor,
       color: variables.mainWhiteColor
     }}
   >
@@ -24,10 +24,10 @@ const Header = () => (
       css={{
         display: "grid",
         height: "100vh",
-        "grid-template-columns": "repeat(4, 1fr)",
-        "grid-gap": "10px",
-        "grid-auto-rows": "auto",
-        "grid-template-areas": `
+        gridTemplateColumns: "repeat(4, 1fr)",
+        gridGap: "10px",
+        gridAutoRows: "auto",
+        gridTemplateAreas: `
         '. hero hero .'
         '. hero hero .'
         '. hero hero .'
@@ -36,35 +36,36 @@ const Header = () => (
     >
       <div
         css={{
-          "grid-area": "hero",
-          "align-self": "center",
-          "justify-self": "center"
+          gridArea: "hero",
+          alignSelf: "center",
+          justifySelf: "center"
         }}
       >
         <div
           css={{
             display: "grid",
             height: "100%",
-            "grid-template-rows": "repeat(4, 1fr)",
-            "grid-template-areas": `
+            gridTemplateRows: "repeat(4, 1fr)",
+            gridTemplateAreas: `
               '. title title .'
               'subtitle subtitle subtitle subtitle'
 
               'cta1 . . cta2'
+              'newsletter newsletter newsletter newsletter'
             `
           }}
         >
           <header
             css={{
-              "grid-area": "title",
-              "align-self": "center",
-              "justify-self": "center"
+              gridArea: "title",
+              alignSelf: "center",
+              justifySelf: "center"
             }}
           >
             <h1
               css={{
                 color: variables.mainWhiteColor,
-                "font-size": "5em"
+                fontSize: "5em"
               }}
             >
               learn a11y
@@ -72,11 +73,11 @@ const Header = () => (
           </header>
           <div
             css={{
-              "grid-area": "subtitle",
-              "align-self": "center",
-              "justify-self": "center",
-              "font-size": "2em",
-              "text-align": "center"
+              gridArea: "subtitle",
+              alignSelf: "center",
+              justifySelf: "center",
+              fontSize: "2em",
+              textAlign: "center"
             }}
           >
             Your source on how to be a better content creator and web developer
@@ -84,13 +85,13 @@ const Header = () => (
           </div>
           <div
             css={{
-              "grid-area": "cta1",
-              "align-self": "center",
-              "justify-self": "center",
-              "text-align": "center"
+              gridArea: "cta1",
+              alignSelf: "center",
+              justifySelf: "center",
+              textAlign: "center"
             }}
           >
-            <div css={{ "margin-bottom": "3px" }}>Content Creator?</div>
+            <div css={{ marginBottom: "3px" }}>Content Creator?</div>
             <Button
               onClick={() => {
                 push("/learning/content");
@@ -102,10 +103,10 @@ const Header = () => (
           </div>
           <div
             css={{
-              "grid-area": "cta2",
-              "align-self": "center",
-              "justify-self": "center",
-              "text-align": "center"
+              gridArea: "cta2",
+              alignSelf: "center",
+              justifySelf: "center",
+              textAlign: "center"
             }}
           >
             <div css={{ "margin-bottom": "3px" }}>Web Developer?</div>
