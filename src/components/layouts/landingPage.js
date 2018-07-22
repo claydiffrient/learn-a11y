@@ -1,6 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 import Button from "@instructure/ui-buttons/lib/components/Button";
+import NewsletterForm from "../newsletter-form";
 import { push } from "gatsby";
 
 import theme from "@instructure/ui-themes/lib/canvas";
@@ -112,6 +113,16 @@ const Header = () => (
             <div css={{ "margin-bottom": "3px" }}>Web Developer?</div>
             <div>Coming Soon!</div>
           </div>
+        </div>
+        <div
+          css={{
+            gridArea: "newsletter",
+            alignSelf: "center",
+            justifySelf: "center",
+            textAlign: "center"
+          }}
+        >
+          <NewsletterForm />
         </div>
       </div>
     </div>
